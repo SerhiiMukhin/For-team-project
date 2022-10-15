@@ -444,6 +444,7 @@ body {
   overflow-y: scroll;
   /*  Установаем ширину окна  */
   width: 100%;
+  height: 100%;
   max-width: 280px;
   padding: 28px;
   /*  Центрируем и задаем z-index */
@@ -535,6 +536,9 @@ body {
   height: 50px;
 }
 
+.modal_title {
+  margin-bottom: 84px;
+}
 @media screen and (min-width: 768px) {
   .modal_title {
     margin-bottom: 40px;
@@ -554,7 +558,8 @@ body {
           justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  gap: 20px;
+  margin-bottom: 24px;
+  gap: 84px;
 }
 
 .buy-now_checkbox-label {
@@ -571,13 +576,67 @@ body {
 }
 
 .buy-now_thumb {
+  position: relative;
   width: 132px;
   height: 136px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
           filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   border-radius: 16px;
   -webkit-transition: 1s all;
   transition: 1s all;
+}
+
+.image_underlay {
+  position: absolute;
+  bottom: 60px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+}
+
+.icecream_underlay {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(156, 190, 143, 0.7)), to(rgba(156, 190, 143, 0.7))), #d9d9d9;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.icecoffee_underlay {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(248, 210, 78, 0.7)), to(rgba(248, 210, 78, 0.7))), #D9D9D9;
+  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+
+.milkshake_underlay {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(213, 117, 63, 0.7)), to(rgba(213, 117, 63, 0.7))), #D9D9D9;
+  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
+.thumb-title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #131313;
+}
+
+.checkbox {
+  display: none;
 }
 
 .icecream_thumb {
@@ -589,17 +648,17 @@ body {
 }
 
 .icecoffee_thumb {
-  border: 2px solid #EFD478;
+  border: 2px solid #efd478;
 }
 
 .checkbox:checked + .icecoffee_thumb {
-  background-color: #EFD478;
+  background-color: #efd478;
 }
 
 .milkshake_thumb {
-  border: 2px solid #D6936D;
+  border: 2px solid #d6936d;
 }
 
 .checkbox:checked + .milkshake_thumb {
-  background-color: #D6936D;
+  background-color: #d6936d;
 }/*# sourceMappingURL=main.css.map */
