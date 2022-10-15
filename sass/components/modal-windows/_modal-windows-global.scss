@@ -84,6 +84,11 @@
   transition: 0.3s all;
 }
 
+.input.textarea {
+  resize: none;
+  margin-bottom: 0;
+}
+
 // необовязкова фігня
 .buttons {
   padding: 15px;
