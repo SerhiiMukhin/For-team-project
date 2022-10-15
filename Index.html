@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <title>Ice cream</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Modal windows</title>
+</head>
+<body>
 
+<!-- /**
+  |============================
+  | Open modal buttons
+  |============================
+*/ -->
 
-    <!-- buy now modal -->
-    <div class="buy-now_modal">
-      <button type="button" class="close-modal">X</button>
+    <div class="buttons">
+        <button type="button" data-modal="buy-now" class="open-modal js-open-modal">Buy Now</button>
+        <button type="button" data-modal="ingredients" class="open-modal js-open-modal">Buy Now (with Ingredients)</button>
+        <button type="button" data-modal="how-made" class="open-modal js-open-modal">How It`s Made</button>
+        <button type="button" data-modal="locations" class="open-modal js-open-modal">Our Locations</button>
+        <button type="button" data-modal="franchise" class="open-modal js-open-modal">Franchise</button>
+    </div>
+
+    <!-- /**
+      |============================
+      | Buy Now Modal Window
+      |============================
+    */ -->
+
+<div class="modal js-modal" data-modal="buy-now">
+    <button type="button" class="modal-close js-modal-close">CLOSE</button>
       <h3>Buy now</h3>
       <div class="checkboxes">
         <label> <input type="checkbox" name="icecream" value="ice-cream" />Ice Cream </label>
@@ -31,11 +49,16 @@
         </label>
       </form>
       <button type="submit">Submit</button>
-    </div>
+</div>
 
-    <!-- Ingridients modal (there will be 3 versions of them) -->
-    <div class="ingridients_modal">
-      <button type="button" class="close-modal">X</button>
+<!-- /**
+  |============================
+  | Buy Now Modal Window (with Ingredients)
+  |============================
+*/ -->
+
+<div class="modal js-modal" data-modal="ingredients">
+    <button type="button" class="modal-close js-modal-close">CLOSE</button>
       <h3>Chocolate icecream</h3>
       <div class="image"></div>
       <ul>
@@ -58,11 +81,16 @@
         </label>
       </form>
       <button type="submit">Submit</button>
-    </div>
+</div>
 
-    <!-- How it`s made modal -->
-    <div class="h-i-m">
-      <button type="button" class="close-modal">X</button>
+<!-- /**
+  |============================
+  | How It`s Made Modal Window
+  |============================
+*/ -->
+
+<div class="modal js-modal" data-modal="how-made">
+    <button type="button" class="modal-close js-modal-close">CLOSE</button>
       <iframe
         width="560"
         height="315"
@@ -76,11 +104,16 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. A, magni minus incidunt voluptate
         quae tempora saepe excepturi repellendus adipisci ipsam.
       </div>
-    </div>
+</div>
 
-    <!-- Locations modal -->
-    <div class="locations-modal">
-      <button type="button" class="close-modal">X</button>
+<!-- /**
+  |============================
+  | Locations Modal Window
+  |============================
+*/ -->
+
+<div class="modal js-modal" data-modal="locations">
+    <button type="button" class="modal-close js-modal-close">CLOSE</button>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1467.6141402940586!2d30.52492646283971!3d50.449541745586096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce50ffa1b91f%3A0x42d5962fe7e791c!2z0JzQsNC50LTQsNC9INCd0LXQt9Cw0LvQtdC20L3QvtGB0YLRlg!5e0!3m2!1suk!2sua!4v1665785887368!5m2!1suk!2sua"
         width="600"
@@ -91,10 +124,16 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <a href="">Open Map</a>
-    </div>
+</div>
 
-    <!-- Franchise modal -->
-    <div class="franchise">
+<!-- /**
+  |============================
+  | Franchise Modal Window
+  |============================
+*/ -->
+
+<div class="modal js-modal" data-modal="franchise">
+    <button type="button" class="modal-close js-modal-close">CLOSE</button>
       <h3>Thank you for your interest in owning an Ice Cream shop</h3>
       <div>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ut corrupti suscipit
@@ -119,6 +158,23 @@
         </label>
       </form>
       <button type="submit">Submit</button>
-    </div>
-  </body>
+</div>
+
+<!-- /**
+  |============================
+  | Overlay
+  |============================
+*/ -->
+
+<div class="overlay js-overlay-modal"></div>
+
+<!-- /**
+  |============================
+  | Modal script
+  |============================
+*/ -->
+
+<script src="./js/modal.js"></script>
+
+</body>
 </html>
