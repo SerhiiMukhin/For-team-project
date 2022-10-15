@@ -1,0 +1,54 @@
+.modal_title {
+  @media screen and(min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.buy-now_checkbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-right: auto;
+  margin-left: auto;
+  gap: 20px;
+}
+
+.buy-now_checkbox-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buy-now_thumb {
+  width: 132px;
+  height: 136px;
+
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  border-radius: 16px;
+  transition: 1s all;
+}
+
+.icecream_thumb {
+    border: 2px solid #96af8c;
+}
+
+.checkbox:checked + .icecream_thumb {
+    background-color: #96af8c;
+}
+
+.icecoffee_thumb {
+    border: 2px solid #EFD478;
+}
+
+.checkbox:checked + .icecoffee_thumb {
+    background-color: #EFD478;
+}
+
+.milkshake_thumb {
+    border: 2px solid #D6936D;
+}
+
+.checkbox:checked + .milkshake_thumb {
+    background-color: #D6936D;
+}
