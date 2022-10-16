@@ -33,7 +33,7 @@
   position: relative;
 
   display: flex;
-  width: 53px;
+  width: calc((100% - 27px) / 4);
   height: 72px;
 
   padding: 8px;
