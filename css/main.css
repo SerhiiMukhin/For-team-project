@@ -541,11 +541,11 @@ body {
   height: 50px;
 }
 
-.modal_title {
+.buy-now_title {
   margin-bottom: 84px;
 }
 @media screen and (min-width: 768px) {
-  .modal_title {
+  .buy-now_title {
     margin-bottom: 103px;
   }
 }
@@ -858,10 +858,6 @@ body {
           justify-content: space-between;
 }
 
-.how-its-made_title {
-  margin-bottom: 20px;
-}
-
 .how-its-made_video {
   margin-bottom: 20px;
 }
@@ -874,18 +870,10 @@ body {
   color: #131313;
 }
 
-.location-title {
-  margin-bottom: 20px;
-}
-
 .location-image {
   display: block;
   border-radius: 10px;
   margin-bottom: 24px;
-}
-
-.franchise_title {
-  margin-bottom: 20px;
 }
 
 .franchise_text {
