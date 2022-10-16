@@ -466,8 +466,7 @@ body {
   .modal {
     max-width: 568px;
     padding: 32px;
-    height: auto;
-    overflow-y: auto;
+    height: 100%;
   }
 }
 
@@ -744,4 +743,118 @@ body {
 
 .checkbox:checked + .milkshake_thumb {
   background-color: #d6936d;
+}
+
+.buy-now-ingredients_modal {
+  padding: 20px;
+  padding-bottom: 32px;
+}
+
+.buy-now-ingredients_title {
+  margin-bottom: 30px;
+}
+
+.buy-now-ingredients_image-underlay {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(156, 190, 143, 0.7)), to(rgba(156, 190, 143, 0.7))), #d9d9d9;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.buy-now-ingredients_list {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 9px;
+}
+
+.buy-now-ingredients_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 53px;
+  height: 72px;
+  padding: 8px;
+  border: 2px solid #9cbe8f;
+  border-radius: 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nutrients_underlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -2px;
+  width: 43px;
+  height: 43px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
+  color: #131313;
+  border-radius: 50%;
+  background: #9cbe8f;
+  border: 2px solid #9cbe8f;
+  -webkit-box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+          box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+}
+
+.nutrients {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #131313;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ingredients_small-title {
+  margin-bottom: 24px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #131313;
+}
+
+.ingredients_list {
+  margin-bottom: 48px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7857142857;
+  letter-spacing: 0.04em;
+  color: #131313;
+}
+
+.ingredients_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
     <title>Modal windows</title>
   </head>
   <body>
@@ -67,7 +68,6 @@
       </div>
 
       <form name="buy-now" class="form buy-now_form">
-        
         <label class="form_label">
           <input class="input" type="text" name="name" autocomplete="on" placeholder="Name" />
         </label>
@@ -77,7 +77,13 @@
         </label>
 
         <label class="form_label">
-          <textarea class="input textarea" name="comment" id="comment" rows="3" placeholder="Comment" ></textarea>
+          <textarea
+            class="input textarea"
+            name="comment"
+            id="comment"
+            rows="3"
+            placeholder="Comment"
+          ></textarea>
         </label>
       </form>
 
@@ -90,27 +96,56 @@
   |============================
 */ -->
 
-    <div class="modal js-modal" data-modal="buy-now_ingredients">
+    <div class="buy-now-ingredients_modal modal js-modal" data-modal="buy-now_ingredients">
       <button type="button" class="modal-close js-modal-close">X</button>
-      <h3 class="modal_title">Chocolate icecream</h3>
-      <div class="image"></div>
-      <ul>
-        <li>ckal</li>
-        <li>Proteins</li>
-        <li>Fats</li>
-        <li>Carbs</li>
+      <h3 class="modal_title buy-now-ingredients_title">Chocolate icecream</h3>
+      <div class="buy-now-ingredients_image-underlay"></div>
+      <ul class="buy-now-ingredients_list">
+        <li class="buy-now-ingredients_item">
+          <div class="nutrients_underlay">320</div>
+          <p class="nutrients">ckal</p>
+        </li>
+        <li class="buy-now-ingredients_item">
+          <div class="nutrients_underlay">4g</div>
+          <p class="nutrients">Proteins</p>
+        </li>
+        <li class="buy-now-ingredients_item">
+          <div class="nutrients_underlay">8,2g</div>
+          <p class="nutrients">Fats</p>
+        </li>
+        <li class="buy-now-ingredients_item">
+          <div class="nutrients_underlay">40,4g</div>
+          <p class="nutrients">Carbs</p>
+        </li>
       </ul>
-      <p>Ingridients</p>
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officiis?</div>
-      <form name="buy-now">
-        <label>
-          <input type="text" name="name" autocomplete="on" placeholder="Name" />
+      <p class="ingredients_small-title">Ingredients</p>
+
+      <ul class="ingredients_list">
+        <li class="ingredients_item"><span>Milk</span><span>100ml</span></li>
+        <li class="ingredients_item"><span>Belgian chocolate</span><span>20g</span></li>
+        <li class="ingredients_item"><span>Cream</span><span>150 ml</span></li>
+        <li class="ingredients_item"><span>Cocoa powder</span><span>30g</span></li>
+        <li class="ingredients_item"><span>Sugar</span><span>40g</span></li>
+        <li class="ingredients_item"><span>Vanilla sugar</span><span>10g</span></li>
+      </ul>
+
+      <form name="buy-now" class="form buy-now_form">
+        <label class="form_label">
+          <input class="input" type="text" name="name" autocomplete="on" placeholder="Name" />
         </label>
-        <label>
-          <input type="tel" name="tel" autocomplete="on" placeholder="Phone" />
+
+        <label class="form_label">
+          <input class="input" type="tel" name="tel" autocomplete="on" placeholder="Phone" />
         </label>
-        <label>
-          <input type="text" name="comment" autocomplete="on" placeholder="Comment" />
+
+        <label class="form_label">
+          <textarea
+            class="input textarea"
+            name="comment"
+            id="comment"
+            rows="3"
+            placeholder="Comment"
+          ></textarea>
         </label>
       </form>
       <button type="submit">Submit</button>
