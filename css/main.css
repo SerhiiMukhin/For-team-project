@@ -441,10 +441,10 @@ body {
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-  overflow-y: scroll;
+  overflow: hiddenq s;
   /*  Установаем ширину окна  */
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 280px;
   padding: 28px;
   /*  Центрируем и задаем z-index */
@@ -539,6 +539,13 @@ body {
 .open-modal {
   width: 200px;
   height: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .buy-now_modal {
+    max-height: 100%;
+    overflow-y: scroll;
+  }
 }
 
 .buy-now_title {
@@ -745,8 +752,14 @@ body {
 }
 
 .buy-now-ingredients_modal {
-  padding: 20px;
-  padding-bottom: 32px;
+  padding: 32px 20px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 481px) {
+  .buy-now-ingredients_modal {
+    padding: 32px 40px;
+  }
 }
 
 .buy-now-ingredients_title {
@@ -773,7 +786,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 9px;
+}
+@media screen and (min-width: 481px) {
+  .buy-now-ingredients_list {
+    margin-bottom: 24px;
+    gap: 20px;
+  }
 }
 
 .buy-now-ingredients_item {
@@ -792,6 +814,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (min-width: 481px) {
+  .buy-now-ingredients_item {
+    width: 65px;
+    height: 90px;
+  }
 }
 
 .nutrients_underlay {
@@ -818,6 +846,14 @@ body {
   border: 2px solid #9cbe8f;
   -webkit-box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
           box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+}
+@media screen and (min-width: 481px) {
+  .nutrients_underlay {
+    width: 53px;
+    height: 53px;
+    font-size: 12px;
+    line-height: 2.3333333333;
+  }
 }
 
 .nutrients {
@@ -858,8 +894,20 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 481px) {
+  .how-its-made_modal {
+    padding: 32px 60px;
+  }
+}
+
 .how-its-made_video {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 481px) {
+  .how-its-made_video {
+    width: 448px;
+    height: 205px;
+  }
 }
 
 .how-its-made_text {
@@ -870,10 +918,34 @@ body {
   color: #131313;
 }
 
+@media screen and (min-width: 481px) {
+  .location_modal {
+    padding: 32px 60px;
+  }
+}
+
 .location-image {
   display: block;
   border-radius: 10px;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 481px) {
+  .location-image {
+    width: 448px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .franchise_modal {
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 481px) {
+  .franchise_modal {
+    padding: 32px 60px;
+  }
 }
 
 .franchise_text {

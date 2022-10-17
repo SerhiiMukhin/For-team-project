@@ -1,5 +1,16 @@
+.how-its-made_modal {
+    @media screen and(min-width: 481px) {
+        padding: 32px 60px;
+    }
+}
+
 .how-its-made_video {
     margin-bottom: 20px;
+
+    @media screen and(min-width: 481px) {
+        width: 448px;
+        height: 205px;
+    }
 }
 
 .how-its-made_text {

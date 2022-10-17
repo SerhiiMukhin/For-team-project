@@ -2,11 +2,11 @@
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-  overflow-y: scroll;
+  overflow: hiddenq s;
 
   /*  Установаем ширину окна  */
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 280px;
 
   padding: 28px;
