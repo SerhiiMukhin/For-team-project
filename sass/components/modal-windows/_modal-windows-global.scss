@@ -2,11 +2,14 @@
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-  overflow: hiddenq s;
+
+  // pointer-events: none;
+
+  overflow-y: scroll;
 
   /*  Установаем ширину окна  */
   width: 100%;
-  height: auto;
+  height: 90vh;
   max-width: 280px;
 
   padding: 28px;
@@ -14,6 +17,8 @@
   @media screen and(min-width: 768px) {
     max-width: 568px;
     padding: 32px;
+    height: auto;
+    overflow-y: auto;
   }
 
   /*  Центрируем и задаем z-index */
@@ -24,6 +29,7 @@
   z-index: 30; /* Должен быть выше чем у подложки*/
 
   /*  Побочные стили   */
+  //   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: 0.3s all;
 
@@ -59,10 +65,11 @@
   font-family: 'Seymour One';
   font-size: 16px;
   line-height: calc(24 / 16);
+  color: #131313;
 
   @media screen and(min-width: 768px) {
     margin-bottom: 32px;
-
+    
     font-size: 20px;
     line-height: calc(28 / 20);
   }
@@ -71,6 +78,8 @@
 .overlay {
   opacity: 0;
   visibility: hidden;
+
+  // pointer-events: none;
 
   position: fixed;
   top: 0;
@@ -85,6 +94,42 @@
 .input.textarea {
   resize: none;
   margin-bottom: 0;
+}
+
+.modal-close {
+  background-color: #fff;
+  border: none;
+}
+
+.modal-submit_button {
+  margin-top: 24px;
+  width: 114px;
+  height: 42px;
+
+  background-color: #f8d24e;
+  border: none;
+  border-radius: 10px;
+
+  color: #131313;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+
+  @media screen and(min-width:481px) {
+    margin-top: 32px;
+    
+    width: 121px;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}
+
+.icon-close-modal {
+  @media screen and(max-width: 480px) {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 // необовязкова фігня

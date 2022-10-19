@@ -441,10 +441,10 @@ body {
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-  overflow: hiddenq s;
+  overflow-y: scroll;
   /*  Установаем ширину окна  */
   width: 100%;
-  height: auto;
+  height: 90vh;
   max-width: 280px;
   padding: 28px;
   /*  Центрируем и задаем z-index */
@@ -466,6 +466,8 @@ body {
   .modal {
     max-width: 568px;
     padding: 32px;
+    height: auto;
+    overflow-y: auto;
   }
 }
 
@@ -496,6 +498,7 @@ body {
   font-family: "Seymour One";
   font-size: 16px;
   line-height: 1.5;
+  color: #131313;
 }
 @media screen and (min-width: 768px) {
   .modal_title {
@@ -524,6 +527,40 @@ body {
   margin-bottom: 0;
 }
 
+.modal-close {
+  background-color: #fff;
+  border: none;
+}
+
+.modal-submit_button {
+  margin-top: 24px;
+  width: 114px;
+  height: 42px;
+  background-color: #f8d24e;
+  border: none;
+  border-radius: 10px;
+  color: #131313;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+}
+@media screen and (min-width: 481px) {
+  .modal-submit_button {
+    margin-top: 32px;
+    width: 121px;
+    font-size: 14px;
+    line-height: 1.2142857143;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .icon-close-modal {
+    width: 8px;
+    height: 8px;
+  }
+}
+
 .buttons {
   padding: 15px;
   display: -webkit-box;
@@ -543,7 +580,6 @@ body {
 
 @media screen and (max-width: 480px) {
   .buy-now_modal {
-    max-height: 100%;
     overflow-y: scroll;
   }
 }
@@ -626,6 +662,12 @@ body {
   border-radius: 50%;
 }
 
+.buy-now_modal-image {
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+
 .icecream_underlay {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(156, 190, 143, 0.7)), to(rgba(156, 190, 143, 0.7))), #d9d9d9;
   background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
@@ -660,12 +702,10 @@ body {
 .buy-now_form {
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .buy-now_form {
     max-width: 368px;
-    margin-bottom: 32px;
   }
 }
 
@@ -674,7 +714,8 @@ body {
   margin-bottom: 12px;
   padding: 8px 12px 7px 12px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  outline: 1px solid #84a178;
+  border: none;
   border-radius: 10px;
   font-family: "Montserrat";
   font-weight: 400;
@@ -723,6 +764,14 @@ body {
   color: #131313;
 }
 
+input:valid {
+  outline: 1px solid #84a178;
+}
+
+.input:invalid {
+  outline: 2px solid red;
+}
+
 .checkbox {
   display: none;
 }
@@ -767,6 +816,7 @@ body {
 }
 
 .buy-now-ingredients_image-underlay {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
@@ -777,6 +827,13 @@ body {
   background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
   -webkit-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
           box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.ingedients_modal-image {
+  position: absolute;
+  left: 0;
+  top: -7px;
+  border-radius: 50%;
 }
 
 .buy-now-ingredients_list {
@@ -894,6 +951,9 @@ body {
           justify-content: space-between;
 }
 
+.how-its-made_modal {
+  height: auto;
+}
 @media screen and (min-width: 481px) {
   .how-its-made_modal {
     padding: 32px 60px;
@@ -918,6 +978,9 @@ body {
   color: #131313;
 }
 
+.location_modal {
+  height: auto;
+}
 @media screen and (min-width: 481px) {
   .location_modal {
     padding: 32px 60px;
@@ -931,14 +994,30 @@ body {
 }
 @media screen and (min-width: 481px) {
   .location-image {
-    width: 448px;
-    height: 260px;
+    margin-bottom: 32px;
+  }
+}
+
+.open-map_link {
+  padding: 12px 34px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #131313;
+  background-color: #f8d24e;
+  border-radius: 10px;
+}
+@media screen and (min-width: 481px) {
+  .open-map_link {
+    font-size: 14px;
+    line-height: 1.2142857143;
   }
 }
 
 @media screen and (max-width: 480px) {
   .franchise_modal {
-    max-height: 100%;
     overflow-y: scroll;
   }
 }
